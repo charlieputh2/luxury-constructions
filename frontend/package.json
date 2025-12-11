@@ -1,0 +1,29 @@
+{
+  "name": "luxury-construction",
+  "version": "1.0.0",
+  "description": "Luxury Construction - Professional Concrete & Landscaping Services",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "axios": "^1.6.0",
+    "react-icons": "^4.12.0",
+    "react-hook-form": "^7.48.0",
+    "next-seo": "^6.4.0",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.54.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}
