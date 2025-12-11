@@ -22,14 +22,7 @@ export default function Footer() {
           <div className={`transform transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <div className="flex items-center gap-3 mb-4 group">
-              <img
-                src="https://res.cloudinary.com/dtr1tnutd/image/upload/v1765250127/logo_zo8ea0.png"
-                alt="Luxury Construction Logo"
-                className="h-14 w-14 sm:h-16 sm:w-16 rounded-lg shadow-lg group-hover:scale-125 group-hover:shadow-2xl transition-all duration-500 ease-out"
-              />
-              <h4 className="text-accent-gold font-bold text-base sm:text-lg group-hover:text-yellow-300 transition-colors duration-300">Luxury Construction</h4>
-            </div>
+            <h4 className="text-accent-gold font-bold text-base sm:text-lg mb-4 hover:text-yellow-300 transition-colors duration-300">Luxury Construction</h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2 group hover:translate-x-1 transition-transform duration-300">
                 <span className="inline-block w-1.5 h-1.5 bg-green-300 rounded-full group-hover:scale-150 transition-transform duration-300"></span>
