@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function ContactForm() {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -70,9 +72,13 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white" ref={sectionRef}>
       <div className="container-custom">
-        <div className="max-w-2xl mx-auto">
+        <div className={`max-w-2xl mx-auto transform transition-all duration-1200 ease-out ${
+          sectionVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}>
           <h2 className="text-center mb-4">Get Your Free Estimate</h2>
           <p className="text-center text-gray-600 mb-12">
             Fill out the form below and our team will contact you within 24 hours with a personalized quote.

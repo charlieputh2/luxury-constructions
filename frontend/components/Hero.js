@@ -5,6 +5,9 @@ import { FaArrowRight, FaCheckCircle, FaChevronDown } from 'react-icons/fa'
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [scrollY, setScrollY] = useState(0)
+  const [displayedText, setDisplayedText] = useState('')
+  const fullText = 'Premier Concrete Contractors in Salt Lake City, UT'
+  const typingSpeed = 50
 
   useEffect(() => {
     setIsVisible(true)
@@ -12,6 +15,23 @@ export default function Hero() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Typewriter effect
+  useEffect(() => {
+    if (!isVisible) return
+    
+    let index = 0
+    const timer = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayedText(fullText.substring(0, index + 1))
+        index++
+      } else {
+        clearInterval(timer)
+      }
+    }, typingSpeed)
+
+    return () => clearInterval(timer)
+  }, [isVisible])
 
   return (
     <>
@@ -52,13 +72,14 @@ export default function Hero() {
                 </span>
               </div>
 
-              {/* Main Heading */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-xl transition-all duration-1200 ease-out" 
+              {/* Main Heading with Typewriter Effect */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-xl transition-all duration-1200 ease-out min-h-[1.2em]" 
                 style={{
                   textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
                   letterSpacing: '-0.02em'
                 }}>
-                Premier Concrete Contractors in Salt Lake City, UT
+                {displayedText}
+                <span className={`${displayedText.length === fullText.length ? 'hidden' : 'inline-block'} w-1 h-[1.2em] bg-accent-gold ml-1 animate-pulse`}></span>
               </h1>
 
               {/* Tagline with Gold Accent */}
