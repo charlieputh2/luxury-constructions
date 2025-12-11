@@ -17,17 +17,19 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="container-custom section-padding relative z-10">
-        <div className="grid md:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 mb-8">
           {/* Company Info */}
           <div className={`transform transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <img
-              src="https://res.cloudinary.com/dtr1tnutd/image/upload/v1765250127/logo_zo8ea0.png"
-              alt="Luxury Construction Logo"
-              className="h-12 w-12 mb-4 hover:scale-110 transition-transform duration-300"
-            />
-            <h4 className="text-green-300 font-bold mb-4 text-lg">Luxury Construction</h4>
+            <div className="flex items-center gap-3 mb-4 group">
+              <img
+                src="https://res.cloudinary.com/dtr1tnutd/image/upload/v1765250127/logo_zo8ea0.png"
+                alt="Luxury Construction Logo"
+                className="h-14 w-14 sm:h-16 sm:w-16 rounded-lg shadow-lg group-hover:scale-125 group-hover:shadow-2xl transition-all duration-500 ease-out"
+              />
+              <h4 className="text-accent-gold font-bold text-base sm:text-lg group-hover:text-yellow-300 transition-colors duration-300">Luxury Construction</h4>
+            </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2 group hover:translate-x-1 transition-transform duration-300">
                 <span className="inline-block w-1.5 h-1.5 bg-green-300 rounded-full group-hover:scale-150 transition-transform duration-300"></span>
@@ -48,25 +50,29 @@ export default function Footer() {
           <div className={`transform transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: '100ms' }}>
-            <h4 className="text-green-300 font-bold mb-4">Quick Links</h4>
+            <h4 className="text-accent-gold font-bold mb-4 text-base sm:text-lg hover:text-yellow-300 transition-colors duration-300">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#services" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#services" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Services
                 </a>
               </li>
-              <li>
-                <a href="#why-us" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#why-us" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Why Us
                 </a>
               </li>
-              <li>
-                <a href="#benefits" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#benefits" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Benefits
                 </a>
               </li>
-              <li>
-                <a href="#faq" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#faq" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   FAQ
                 </a>
               </li>
@@ -77,25 +83,29 @@ export default function Footer() {
           <div className={`transform transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: '200ms' }}>
-            <h4 className="text-green-300 font-bold mb-4">Services</h4>
+            <h4 className="text-accent-gold font-bold mb-4 text-base sm:text-lg hover:text-yellow-300 transition-colors duration-300">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#services" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#services" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Concrete Driveways
                 </a>
               </li>
-              <li>
-                <a href="#services" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#services" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Decorative Concrete
                 </a>
               </li>
-              <li>
-                <a href="#services" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#services" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Home Remodeling
                 </a>
               </li>
-              <li>
-                <a href="#services" className="text-green-100 hover:text-green-300 hover:translate-x-1 transition-all duration-300 inline-block">
+              <li className="flex items-center gap-2 group hover:translate-x-1 transition-all duration-300">
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
+                <a href="#services" className="text-green-100 hover:text-green-300 transition-all duration-300 inline-block">
                   Sports Courts
                 </a>
               </li>
@@ -106,46 +116,46 @@ export default function Footer() {
           <div className={`transform transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: '300ms' }}>
-            <h4 className="text-green-300 font-bold mb-4">Services Offered</h4>
+            <h4 className="text-accent-gold font-bold mb-4 text-base sm:text-lg hover:text-yellow-300 transition-colors duration-300">Services Offered</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   All Types of Concrete Work
                 </span>
               </li>
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   Walkout Basements
                 </span>
               </li>
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   Pavers & Retaining Walls
                 </span>
               </li>
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   New Driveways, Footings & Foundations
                 </span>
               </li>
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   Full Landscaping & Tree Removal
                 </span>
               </li>
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   New Fence Installations
                 </span>
               </li>
               <li className="flex items-start gap-2 group hover:translate-x-1 transition-all duration-300">
-                <span className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="inline-block w-1.5 h-1.5 bg-accent-gold rounded-full mt-1 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
                 <span className="text-green-100 group-hover:text-green-300 transition-colors duration-300">
                   ADUs, Home Additions & Roofing
                 </span>
@@ -157,7 +167,7 @@ export default function Footer() {
           <div className={`transform transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: '400ms' }}>
-            <h4 className="text-green-300 font-bold mb-4">Contact Us</h4>
+            <h4 className="text-accent-gold font-bold mb-4 text-base sm:text-lg hover:text-yellow-300 transition-colors duration-300">Contact Us</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3 group hover:translate-x-1 transition-all duration-300">
                 <FaMapMarkerAlt className="text-green-300 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
@@ -187,26 +197,28 @@ export default function Footer() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`} style={{ transitionDelay: '500ms' }}>
           <p className="text-green-100 text-sm">
-            &copy; {currentYear} Luxury Construction LLC. All rights reserved.
+            &copy; {currentYear} Luxury Concrete And Landscaping LLC DBA Luxury Construction. All rights reserved.
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
-              className="text-green-100 hover:text-green-300 hover:scale-125 transition-all duration-300 transform"
+              href="https://www.facebook.com/james.evm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-gold hover:text-yellow-300 hover:scale-125 transition-all duration-300 transform"
               aria-label="Facebook"
             >
               <FaFacebook size={20} />
             </a>
             <a
               href="#"
-              className="text-green-100 hover:text-green-300 hover:scale-125 transition-all duration-300 transform"
+              className="text-accent-gold hover:text-yellow-300 hover:scale-125 transition-all duration-300 transform"
               aria-label="Twitter"
             >
               <FaTwitter size={20} />
             </a>
             <a
               href="#"
-              className="text-green-100 hover:text-green-300 hover:scale-125 transition-all duration-300 transform"
+              className="text-accent-gold hover:text-yellow-300 hover:scale-125 transition-all duration-300 transform"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={20} />
@@ -216,9 +228,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-green-900 py-4 text-center text-green-100 text-sm">
-        <p>
-          Luxury Construction - Premier Concrete Contractors in Salt Lake City, UT | Driveways • Patios • Foundations • Landscaping
+      <div className="bg-green-900 py-4 text-center text-green-100 text-xs sm:text-sm border-t border-green-700 transform transition-all duration-1000 ease-out hover:bg-green-800">
+        <p className="transition-colors duration-300">
+          <span className="text-accent-gold hover:text-yellow-300 transition-colors duration-300">Luxury Construction</span> - General Contractor in Salt Lake City, UT | • Concrete • Pavers • Foundations •Landscaping •ADUs & Roofing
         </p>
       </div>
     </footer>

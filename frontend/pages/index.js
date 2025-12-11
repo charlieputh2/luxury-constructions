@@ -8,6 +8,7 @@ import Benefits from '../components/Benefits'
 import ContactForm from '../components/ContactForm'
 import Map from '../components/Map'
 import FAQ from '../components/FAQ'
+import Testimonials from '../components/Testimonials'
 import CTA from '../components/CTA'
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
       <ContactForm />
       <Map />
       <FAQ />
+      <Testimonials />
       <CTA />
     </>
   )

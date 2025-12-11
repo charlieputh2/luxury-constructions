@@ -109,7 +109,7 @@ export default function Services() {
   return (
     <section 
       id="services" 
-      className="section-padding bg-white"
+      className="section-padding bg-gradient-to-b from-white to-gray-50"
       ref={sectionRef}
     >
       <div className="container-custom">
@@ -118,19 +118,19 @@ export default function Services() {
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}>
-          <h2 className="text-center mb-4 text-primary-700 text-4xl font-bold transition-all duration-1200 ease-out hover:text-primary-600">Our Services</h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 text-lg transition-all duration-1200 ease-out">
+          <h2 className="text-center mb-4 text-primary-700 text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-1200 ease-out hover:text-primary-600">Our Services</h2>
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base md:text-lg transition-all duration-1200 ease-out leading-relaxed">
             We offer a comprehensive range of concrete and landscaping services designed to enhance your property and meet your unique needs.
-        </p>
+          </p>
 
         {/* Concrete Services */}
-        <div className={`mb-16 transform transition-all duration-1200 ease-out ${
+        <div className={`mb-12 sm:mb-16 transform transition-all duration-1200 ease-out ${
           sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
-          <h3 className="text-2xl font-bold text-primary-500 mb-8 flex items-center gap-3 transition-all duration-500 hover:text-primary-600 hover:translate-x-1">
+          <h3 className="text-xl sm:text-2xl font-bold text-primary-500 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3 transition-all duration-500 hover:text-primary-600 hover:translate-x-1">
             <FaRoad /> Concrete Services
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {concreteServices.map((service, idx) => (
               <button
                 key={idx}
@@ -138,13 +138,13 @@ export default function Services() {
                   setSelectedService(service)
                   setIsModalOpen(true)
                 }}
-                className={`bg-gradient-to-br from-white to-primary-50 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 ease-out border-l-4 border-accent-gold hover:border-primary-700 transform hover:scale-105 hover:-translate-y-2 cursor-pointer text-left group transform transition-all duration-1200 ease-out ${
+                className={`bg-gradient-to-br from-white to-primary-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 ease-out border-l-4 border-accent-gold hover:border-primary-700 transform hover:scale-105 hover:-translate-y-2 cursor-pointer text-left group transition-all duration-1200 ease-out ${
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                 }`}
                 style={{ transitionDelay: `${idx * 75}ms` }}
               >
                 {service.image && (
-                  <div className="mb-4 h-32 rounded-lg overflow-hidden bg-gray-200 transition-transform duration-500 ease-out group-hover:scale-110 relative">
+                  <div className="mb-3 sm:mb-4 h-24 sm:h-32 rounded-lg overflow-hidden bg-gray-200 transition-transform duration-500 ease-out group-hover:scale-110 relative">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -157,9 +157,9 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 )}
-                <h4 className="text-primary-700 mb-3 font-bold transition-all duration-500 group-hover:text-accent-gold group-hover:translate-x-1">{service.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed transition-all duration-500 group-hover:text-gray-700 group-hover:translate-x-0.5">{service.description}</p>
-                <div className="mt-4 text-accent-gold font-bold text-sm transition-all duration-300 ease-out group-hover:translate-x-2 inline-flex items-center gap-1">
+                <h4 className="text-primary-700 mb-2 sm:mb-3 font-bold text-sm sm:text-base transition-all duration-500 group-hover:text-accent-gold group-hover:translate-x-1">{service.title}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed transition-all duration-500 group-hover:text-gray-700 group-hover:translate-x-0.5">{service.description}</p>
+                <div className="mt-3 sm:mt-4 text-accent-gold font-bold text-xs sm:text-sm transition-all duration-300 ease-out group-hover:translate-x-2 inline-flex items-center gap-1">
                   <span>View Details</span>
                   <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </div>
@@ -169,13 +169,13 @@ export default function Services() {
         </div>
 
         {/* Home & Construction Services */}
-        <div className={`mb-16 transform transition-all duration-1200 ease-out ${
+        <div className={`mb-12 sm:mb-16 transform transition-all duration-1200 ease-out ${
           sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
-          <h3 className="text-2xl font-bold text-primary-500 mb-8 flex items-center gap-3 transition-all duration-500 hover:text-primary-600 hover:translate-x-1">
+          <h3 className="text-xl sm:text-2xl font-bold text-primary-500 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3 transition-all duration-500 hover:text-primary-600 hover:translate-x-1">
             <FaHome /> Garage & Home Construction
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {homeServices.map((service, idx) => (
               <button
                 key={idx}
@@ -183,13 +183,13 @@ export default function Services() {
                   setSelectedService(service)
                   setIsModalOpen(true)
                 }}
-                className={`bg-gradient-to-br from-white to-primary-50 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 ease-out border-l-4 border-accent-gold hover:border-primary-700 transform hover:scale-105 hover:-translate-y-2 cursor-pointer text-left group transform transition-all duration-1200 ease-out ${
+                className={`bg-gradient-to-br from-white to-primary-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 ease-out border-l-4 border-accent-gold hover:border-primary-700 transform hover:scale-105 hover:-translate-y-2 cursor-pointer text-left group transition-all duration-1200 ease-out ${
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                 }`}
                 style={{ transitionDelay: `${idx * 75}ms` }}
               >
                 {service.image && (
-                  <div className="mb-4 h-32 rounded-lg overflow-hidden bg-gray-200 transition-transform duration-500 ease-out group-hover:scale-110 relative">
+                  <div className="mb-3 sm:mb-4 h-24 sm:h-32 rounded-lg overflow-hidden bg-gray-200 transition-transform duration-500 ease-out group-hover:scale-110 relative">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -202,9 +202,9 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 )}
-                <h4 className="text-primary-700 mb-3 font-bold transition-all duration-500 group-hover:text-accent-gold group-hover:translate-x-1">{service.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed transition-all duration-500 group-hover:text-gray-700 group-hover:translate-x-0.5">{service.description}</p>
-                <div className="mt-4 text-accent-gold font-bold text-sm transition-all duration-300 ease-out group-hover:translate-x-2 inline-flex items-center gap-1">
+                <h4 className="text-primary-700 mb-2 sm:mb-3 font-bold text-sm sm:text-base transition-all duration-500 group-hover:text-accent-gold group-hover:translate-x-1">{service.title}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed transition-all duration-500 group-hover:text-gray-700 group-hover:translate-x-0.5">{service.description}</p>
+                <div className="mt-3 sm:mt-4 text-accent-gold font-bold text-xs sm:text-sm transition-all duration-300 ease-out group-hover:translate-x-2 inline-flex items-center gap-1">
                   <span>View Details</span>
                   <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </div>
@@ -214,18 +214,18 @@ export default function Services() {
         </div>
 
         {/* Sports Court Services */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-primary-500 mb-8 flex items-center gap-3">
+        <div className="mb-12 sm:mb-16">
+          <h3 className="text-xl sm:text-2xl font-bold text-primary-500 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3">
             <FaBasketballBall /> Sports Court Construction
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {courtServices.map((service, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-white to-primary-50 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 ease-out border-l-4 border-accent-gold hover:border-primary-700 transform hover:scale-105 hover:-translate-y-2"
+                className="bg-gradient-to-br from-white to-primary-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 ease-out border-l-4 border-accent-gold hover:border-primary-700 transform hover:scale-105 hover:-translate-y-2"
               >
-                <h4 className="text-primary-700 mb-3 font-bold transition-colors duration-500">{service.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
+                <h4 className="text-primary-700 mb-2 sm:mb-3 font-bold text-sm sm:text-base transition-colors duration-500">{service.title}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
@@ -235,10 +235,10 @@ export default function Services() {
         <div className={`transform transition-all duration-1200 ease-out ${
           sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
-          <h3 className="text-2xl font-bold text-primary-500 mb-8 flex items-center gap-3 transition-all duration-500 hover:text-primary-600 hover:translate-x-1">
+          <h3 className="text-xl sm:text-2xl font-bold text-primary-500 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3 transition-all duration-500 hover:text-primary-600 hover:translate-x-1">
             <FaLeaf /> Landscaping Services
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {landscapeServices.map((service, idx) => (
               <button
                 key={idx}
