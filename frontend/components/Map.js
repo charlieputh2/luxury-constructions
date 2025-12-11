@@ -20,7 +20,7 @@ export default function Map() {
 
           {/* Info */}
           <div>
-            <h3 className="text-primary-600 mb-6">Luxury Concrete And Landscaping LLC</h3>
+            <h3 className="text-primary-600 mb-6">Luxury Concrete And<br />Landscaping LLC DBA<br />Luxury Construction</h3>
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-primary-700 mb-2">Address</h4>
@@ -43,10 +43,10 @@ export default function Map() {
               <div>
                 <h4 className="font-bold text-primary-700 mb-2">Email</h4>
                 <a
-                  href="mailto:info@luxuryconstruction.com"
+                  href="mailto:contact@luxurycl.net"
                   className="text-primary-500 hover:text-primary-700 font-semibold"
                 >
-                  info@luxuryconstruction.com
+                  contact@luxurycl.net
                 </a>
               </div>
 

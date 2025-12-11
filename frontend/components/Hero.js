@@ -6,7 +6,7 @@ export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
-  const fullText = 'Premier Concrete Contractors in Salt Lake City, UT'
+  const fullText = 'Luxury Construction\nYour General\nContractor for All\nYour Construction Needs'
   const typingSpeed = 50
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Typewriter effect
+  // Typewriter effect - types the entire text
   useEffect(() => {
     if (!isVisible) return
     
@@ -73,12 +73,26 @@ export default function Hero() {
               </div>
 
               {/* Main Heading with Typewriter Effect */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-xl transition-all duration-1200 ease-out min-h-[1.2em]" 
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-xl transition-all duration-1200 ease-out" 
                 style={{
                   textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  letterSpacing: '-0.02em'
+                  letterSpacing: '-0.02em',
+                  whiteSpace: 'pre-wrap',
+                  wordBreak: 'break-word',
+                  minHeight: '1.2em'
                 }}>
-                {displayedText}
+                {displayedText.split('\n').map((line, idx) => (
+                  <div key={idx}>
+                    {line.startsWith('Luxury Construction') ? (
+                      <>
+                        <span className="text-accent-gold">Luxury Construction</span>
+                        {line.substring(19)}
+                      </>
+                    ) : (
+                      line
+                    )}
+                  </div>
+                ))}
                 <span className={`${displayedText.length === fullText.length ? 'hidden' : 'inline-block'} w-1 h-[1.2em] bg-accent-gold ml-1 animate-pulse`}></span>
               </h1>
 

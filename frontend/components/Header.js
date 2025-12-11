@@ -95,30 +95,30 @@ export default function Header() {
               <FaClock size={12} className="text-accent-gold flex-shrink-0" />
               <span>{currentTime || 'Loading...'}</span>
             </div>
-            <div className="flex items-center gap-4 flex-wrap justify-center">
+            <div className="flex items-center gap-2 flex-wrap justify-center text-xs sm:text-sm">
               <a 
                 href="tel:(385)227-4522" 
-                className="flex items-center gap-2 text-white hover:text-accent-gold transition-all duration-300 ease-out px-3 py-1.5 rounded-lg hover:bg-white/10 group whitespace-nowrap"
+                className="flex items-center gap-1.5 text-white hover:text-accent-gold transition-all duration-300 ease-out px-2 py-1.5 rounded-lg hover:bg-white/10 group whitespace-nowrap"
               >
-                <FaPhone size={16} className="text-accent-gold flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-bold group-hover:text-accent-gold transition-colors duration-300">(385) 227-4522</span>
+                <FaPhone size={14} className="text-accent-gold flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-bold group-hover:text-accent-gold transition-colors duration-300">(385) 227-4522</span>
               </a>
               <span className="text-gray-300">•</span>
               <a 
                 href="mailto:contact@luxurycl.net" 
-                className="flex items-center gap-2 text-white hover:text-accent-gold transition-all duration-300 ease-out px-3 py-1.5 rounded-lg hover:bg-white/10 group whitespace-nowrap"
+                className="flex items-center gap-1.5 text-white hover:text-accent-gold transition-all duration-300 ease-out px-2 py-1.5 rounded-lg hover:bg-white/10 group whitespace-nowrap"
               >
-                <FaEnvelope size={16} className="text-accent-gold flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-bold group-hover:text-accent-gold transition-colors duration-300">Email</span>
+                <FaEnvelope size={14} className="text-accent-gold flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-bold group-hover:text-accent-gold transition-colors duration-300">contact@luxurycl.net</span>
               </a>
-              <span className="text-gray-300">•</span>
+              <span className="text-gray-300 hidden sm:inline">•</span>
               <Link
                 href="/maps"
                 legacyBehavior
               >
-                <a className="flex items-center gap-2 text-white hover:text-accent-gold transition-all duration-300 ease-out px-3 py-1.5 rounded-lg hover:bg-white/10 group whitespace-nowrap">
-                  <FaMapMarkerAlt size={16} className="text-accent-gold flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-sm font-bold group-hover:text-accent-gold transition-colors duration-300">Salt Lake City, UT</span>
+                <a className="flex items-center gap-1.5 text-white hover:text-accent-gold transition-all duration-300 ease-out px-2 py-1.5 rounded-lg hover:bg-white/10 group whitespace-nowrap">
+                  <FaMapMarkerAlt size={14} className="text-accent-gold flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-bold group-hover:text-accent-gold transition-colors duration-300">Salt Lake City, UT</span>
                 </a>
               </Link>
             </div>
