@@ -126,13 +126,13 @@ export default function Hero() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <a 
-                  href="tel:(385)227-4522" 
+                <Link 
+                  href="/estimate" 
                   className="group flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-gold via-yellow-400 to-accent-gold text-primary-900 font-bold rounded-xl hover:shadow-2xl hover:from-yellow-400 hover:via-accent-gold hover:to-yellow-400 transition-all duration-500 ease-out transform hover:scale-110 active:scale-95 drop-shadow-xl border-2 border-yellow-300/50"
                 >
                   <span>Get Free Estimate</span>
                   <FaArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
-                </a>
+                </Link>
                 <Link 
                   href="#services" 
                   className="group flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-md text-white font-bold rounded-xl hover:bg-white/35 border-2 border-white/80 hover:border-white transition-all duration-500 ease-out transform hover:scale-110 active:scale-95 drop-shadow-xl"
