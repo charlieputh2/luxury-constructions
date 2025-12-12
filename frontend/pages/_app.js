@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { DefaultSeo } from 'next-seo'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import AIChatbot from '../components/AIChatbot'
 
 const defaultSEO = {
   titleTemplate: '%s | Luxury Construction - Salt Lake City',
@@ -38,6 +39,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <Footer />
+      <AIChatbot />
     </>
   )
 }
