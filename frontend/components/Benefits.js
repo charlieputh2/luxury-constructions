@@ -45,28 +45,29 @@ export default function Benefits() {
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}>
-          <h2 className="text-center mb-4 text-primary-700 text-4xl font-bold transition-all duration-1200 ease-out hover:text-primary-600">
+          <h2 className="text-center mb-3 sm:mb-4 text-primary-700 text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-1200 ease-out hover:text-primary-600 px-4">
             The Benefits of Working With Our Team
           </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 text-lg transition-all duration-1200 ease-out">
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 text-xs sm:text-sm md:text-base lg:text-lg transition-all duration-1200 ease-out px-4">
             Choosing the right contractor is just as important as choosing the right materials. When you work with us, you are choosing a team that puts your peace of mind first.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {benefits.map((benefit, idx) => (
               <div
                 key={idx}
-                className={`group rounded-xl bg-gradient-to-br from-white to-primary-50 border-2 border-primary-200 hover:border-accent-gold shadow-md hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-2 overflow-hidden transform transition-all duration-1200 ease-out ${
+                className={`group rounded-lg sm:rounded-xl bg-gradient-to-br from-white to-primary-50 border-2 border-primary-200 hover:border-accent-gold shadow-md hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-2 overflow-hidden transform transition-all duration-1200 ease-out ${
                   sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                 }`}
                 style={{ transitionDelay: `${idx * 75}ms` }}
               >
                 {/* Image Section */}
-                <div className="relative h-48 md:h-56 overflow-hidden bg-gray-200">
+                <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden bg-gray-200">
                   <img
                     src={benefit.image}
                     alt={benefit.alt}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                   {/* Overlay */}
@@ -74,19 +75,20 @@ export default function Benefits() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6 md:p-8">
-                  <div className="flex justify-center mb-6 transition-transform duration-500 ease-out group-hover:scale-110 group-hover:-translate-y-2">
+                <div className="p-4 sm:p-5 md:p-6 lg:p-8">
+                  <div className="flex justify-center mb-4 sm:mb-5 md:mb-6 transition-transform duration-500 ease-out group-hover:scale-110 group-hover:-translate-y-2">
                     <img
                       src={benefit.iconImage}
                       alt={benefit.iconAlt}
                       loading="lazy"
-                      className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-out group-hover:drop-shadow-lg"
+                      decoding="async"
+                      className="h-12 sm:h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-out group-hover:drop-shadow-lg"
                     />
                   </div>
-                  <h3 className="mb-4 text-primary-700 font-bold text-lg md:text-xl transition-all duration-300 ease-out group-hover:text-accent-gold group-hover:translate-x-1 text-center">
+                  <h3 className="mb-2 sm:mb-3 md:mb-4 text-primary-700 font-bold text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 ease-out group-hover:text-accent-gold group-hover:translate-x-1 text-center leading-tight">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm md:text-base transition-all duration-300 ease-out group-hover:text-gray-700">
+                  <p className="text-gray-600 leading-relaxed text-xs sm:text-sm md:text-base transition-all duration-300 ease-out group-hover:text-gray-700">
                     {benefit.description}
                   </p>
                 </div>
