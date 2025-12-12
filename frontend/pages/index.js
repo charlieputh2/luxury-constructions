@@ -1,6 +1,7 @@
 import { NextSeo } from 'next-seo'
 import Hero from '../components/Hero'
 import WhyUs from '../components/WhyUs'
+import Specialties from '../components/Specialties'
 import Services from '../components/Services'
 import ImageCarousel from '../components/ImageCarousel'
 import PoolCarousel from '../components/PoolCarousel'
@@ -34,6 +35,7 @@ export default function Home() {
       />
       <Hero />
       <WhyUs />
+      <Specialties />
       <Services />
       <ImageCarousel />
       <PoolCarousel />

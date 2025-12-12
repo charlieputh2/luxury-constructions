@@ -105,7 +105,7 @@ export default function Hero() {
 
               {/* Description */}
               <p className="text-lg text-white mb-6 leading-relaxed drop-shadow-lg max-w-2xl font-medium transition-all duration-1200 ease-out">
-                As trusted Concrete Contractors in Salt Lake City, UT, we deliver work that is solid, beautiful, and intentionally crafted to withstand the hot summers, snowy winters, and high-elevation conditions unique to this area. This is why we deliver expert craftsmanship with genuine care for the people and communities we serve, offering both residential and commercial concrete solutions.
+               As trusted General Contractor in Salt Lake City, UT, we deliver work that is solid, beautiful, and intentionally crafted to withstand the hot summers, snowy winters, and high-elevation conditions unique to this area. This is why we deliver expert craftsmanship with genuine care for the people and communities we serve, offering both residential and commercial concrete solutions.
               </p>
 
               <p className="text-base text-gray-100 mb-8 leading-relaxed drop-shadow-lg max-w-2xl transition-all duration-1200 ease-out">
